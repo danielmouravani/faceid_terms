@@ -1,0 +1,25 @@
+{
+  "name": "faceid-terms-sdk",
+  "version": "2.1.0",
+  "description": "Node.js SDK for FaceID & Signature Verification API",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/danielmouravani/faceid_terms.git"
+  },
+  "keywords": [
+    "faceid",
+    "biometric",
+    "signature",
+    "liveness",
+    "api"
+  ],
+  "author": "FaceID Team",
+  "license": "Proprietary",
+  "dependencies": {
+    "axios": "^1.6.7"
+  }
+}

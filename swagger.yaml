@@ -1,0 +1,52 @@
+openapi: 3.0.0
+info:
+  title: FaceID & Signature Verification API
+  version: 2.1.0
+  description: API for biometric facial validation and digital signature extraction.
+servers:
+  - url: https://api.faceid-terms-api.com/v1
+paths:
+  /verify:
+    post:
+      summary: Validate selfie and signature against anti-spoofing models.
+      security:
+        - bearerAuth: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                selfieImage:
+                  type: string
+                  description: Base64 encoded JPEG/PNG of the face.
+                signatureImage:
+                  type: string
+                  description: Base64 encoded PNG of the signature.
+                documentId:
+                  type: string
+                  description: Unique reference ID for the document.
+      responses:
+        '200':
+          description: Validation completed.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  isVerified:
+                    type: boolean
+                  livenessScore:
+                    type: number
+                  errorReason:
+                    type: string
+        '401':
+          description: Unauthorized. Invalid API Key.
+        '402':
+          description: Payment Required. Quota exceeded or subscription inactive.
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
