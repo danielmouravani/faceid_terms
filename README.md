@@ -18,7 +18,7 @@ Access to the production API endpoints requires an active subscription or a prep
 
 | Tier | Monthly Price (BRL) | Validations/mo | Liveness Detection | Support |
 |------|--------------------|----------------|--------------------|---------|
-| **Developer** | Free | 50 | Basic | Community |
+| **Developer** | Free | 5 | Basic | Community |
 | **Pro** | R$ 90,00 | 5,000 | Advanced (Anti-Deepfake) | Email |
 | **Enterprise** | Custom | Unlimited | Military Grade | 24/7 Phone |
 
